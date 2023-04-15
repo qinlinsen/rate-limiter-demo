@@ -1,0 +1,11 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /ratelimiter
+
+
+logging:
+  config: classpath:spring-logbak.xml
+spring:
+  application:
+    name: rate-limiter-demo
