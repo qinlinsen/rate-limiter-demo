@@ -27,9 +27,7 @@
 
 说明： 以springboot中的aop和guava中的限流组件作为技术支撑层完成单体架构下限流的核心代码。
 
-自定义限流注解。应用层代码只需加上RateLimit注解，就可以实现限流。并且该demo中构建了该限流demo的docker镜像
-
-并上传至docker hub中
+自定义限流注解。应用层代码只需加上RateLimit注解，就可以实现限流。并且该demo中构建了该限流demo的docker镜像并上传至docker hub中
 
 
 
@@ -37,7 +35,7 @@
 
 1秒钟有300个请求过来，现在允许的有3个。性能测试报告如下图所示：
 
-![ratelimit-performance](C:\Users\Administrator\Desktop\ratelimit-performance.png)
+![ratelimit-performance](ratelimit-performance.png)
 
 
 
