@@ -1,8 +1,6 @@
 # 概述
 
-限流复杂度可大可小，与公司的架构设计有关，是单体架构还是微服务架构。以及如何把限流这一个通用的逻辑处理进行组件化设计。使其
-
-# 引入到公司项目中开箱即用。
+限流复杂度可大可小，与公司的架构设计有关，是单体架构还是微服务架构。以及如何把限流这一个通用的逻辑处理进行组件化设计。使其引入到公司项目中开箱即用。
 
 
 
@@ -29,19 +27,21 @@
 
 说明： 以springboot中的aop和guava中的限流组件作为技术支撑层完成单体架构下限流的核心代码。
 
-自定义限流注解。应用层代码只需加上RateLimit注解，就可以实现限流。
+自定义限流注解。应用层代码只需加上RateLimit注解，就可以实现限流。并且该demo中构建了该限流demo的docker镜像
+
+并上传至docker hub中
 
 
 
-限流的性能测试
+# 限流的性能测试
 
 1秒钟有300个请求过来，现在允许的有3个。性能测试报告如下图所示：
 
-![ratelimit-performance](ratelimit-performance.png)
+![ratelimit-performance](C:\Users\Administrator\Desktop\ratelimit-performance.png)
 
 
 
-
+jemeter脚本的位置在： src/main/resources/doc/Rate limit Test Plan.jmx
 
 # 推送到dockerhub
 
@@ -58,7 +58,17 @@
 
 ```
 
-# 主要的访问地址
+# 从dockerhub中下载rate-limit-demo
+
+```shell
+docker pull qinlinsendocker/rate-limiter-demo:1.0
+```
+
+
+
+# 重要的访问地址
+
 [qinlinsen dockerhub](https://hub.docker.com/r/qinlinsendocker/rate-limiter-demo)
 
 [swagger](http://localhost:8090/ratelimiter/swagger-ui/index.html)
+
